@@ -1,0 +1,17 @@
+c:\users\rolivella\documents\visual studio 2015\Projects\QCollector\QCollector\obj\Release\MainWindow.g.vb
+c:\users\rolivella\documents\visual studio 2015\Projects\QCollector\QCollector\obj\Release\Application.g.vb
+c:\users\rolivella\documents\visual studio 2015\Projects\QCollector\QCollector\obj\Release\QCollector_MarkupCompile.cache
+c:\users\rolivella\documents\visual studio 2015\Projects\QCollector\QCollector\obj\Release\QCollector_MarkupCompile.lref
+c:\users\rolivella\documents\visual studio 2015\Projects\QCollector\QCollector\obj\Release\MainWindow.baml
+c:\users\rolivella\documents\visual studio 2015\Projects\QCollector\QCollector\obj\Release\QCollector.g.resources
+c:\users\rolivella\documents\visual studio 2015\Projects\QCollector\QCollector\obj\Release\QCollector.Resources.resources
+c:\users\rolivella\documents\visual studio 2015\Projects\QCollector\QCollector\obj\Release\QCollector.vbproj.GenerateResource.Cache
+c:\users\rolivella\documents\visual studio 2015\Projects\QCollector\QCollector\obj\Release\QCollector.exe
+c:\users\rolivella\documents\visual studio 2015\Projects\QCollector\QCollector\obj\Release\QCollector.xml
+c:\users\rolivella\documents\visual studio 2015\Projects\QCollector\QCollector\obj\Release\QCollector.pdb
+C:\Users\rolivella\Documents\Visual Studio 2015\Projects\QCollector\QCollector\obj\Release\QCollector.vbprojResolveAssemblyReference.cache
+C:\Users\rolivella\Documents\Visual Studio 2015\Projects\QCollector\QCollector.exe.config
+C:\Users\rolivella\Documents\Visual Studio 2015\Projects\QCollector\QCollector.exe
+C:\Users\rolivella\Documents\Visual Studio 2015\Projects\QCollector\QCollector.pdb
+C:\Users\rolivella\Documents\Visual Studio 2015\Projects\QCollector\QCollector.xml
+C:\Users\rolivella\Documents\Visual Studio 2015\Projects\QCollector\QCollector\obj\Release\QCollector.SplashScreen1.resources
