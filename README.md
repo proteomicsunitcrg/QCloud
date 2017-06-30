@@ -6,4 +6,9 @@
 
 <b>QCrawler</b>: is the entry point into the QCloud system. It performs user authentication, and once the user has defined the acquisition folder and the instrument, it automatically locates and uploads the quality control acquisition files and instrument parameters to the QCloud system through a remote FTP server.
 
-Creative Commons License ‎Attribution-ShareAlike 4.0.
+# Links to other Github softwares used in QCloud: 
+
+OpenMS: https://github.com/OpenMS/OpenMS
+Proteowizard: https://sourceforge.net/projects/proteowizard/
+
+QCloud is under Creative Commons License ‎Attribution-ShareAlike 4.0.
