@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?><PARAMETERS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.6.2" xsi:noNamespaceSchemaLocation="http://open-ms.sourceforge.net/schemas/Param_1_6_2.xsd">
+  <NODE description="" name="1">
+    <ITEMLIST advanced="false" description="" name="url_list" required="false" type="string">
+      <LISTITEM value="file:///sample_file.mzML"/>
+    </ITEMLIST>
+  </NODE>
+  <NODE description="" name="2">
+    <ITEMLIST advanced="false" description="" name="url_list" required="false" type="string">
+      <LISTITEM value="file://sp_bovine.fasta"/>
+    </ITEMLIST>
+  </NODE>
+</PARAMETERS>
