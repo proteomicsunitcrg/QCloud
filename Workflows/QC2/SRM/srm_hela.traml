@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TraML version="1.0.0" xmlns="http://psi.hupo.org/ms/traml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://psi.hupo.org/ms/traml TraML1.0.0.xsd">
+  <cvList>
+    <cv id="MS" fullName="Proteomics Standards Initiative Mass Spectrometry Ontology" version="unknown" URI="http://psidev.cvs.sourceforge.net/*checkout*/psidev/psi/psi-ms/mzML/controlledVocabulary/psi-ms.obo"/>
+    <cv id="UO" fullName="Unit Ontology" version="unknown" URI="http://obo.cvs.sourceforge.net/obo/obo/ontology/phenotype/unit.obo"/>
+  </cvList>
+  <ProteinList>
+    <Protein id="P00558">
+      <Sequence></Sequence>
+    </Protein>
+    <Protein id="P02545">
+      <Sequence></Sequence>
+    </Protein>
+    <Protein id="P02786">
+      <Sequence></Sequence>
+    </Protein>
+    <Protein id="P04083">
+      <Sequence></Sequence>
+    </Protein>
+    <Protein id="P07195">
+      <Sequence></Sequence>
+    </Protein>
+    <Protein id="P07900">
+      <Sequence></Sequence>
+    </Protein>
+    <Protein id="P08195">
+      <Sequence></Sequence>
+    </Protein>
+    <Protein id="P08670">
+      <Sequence></Sequence>
+    </Protein>
+    <Protein id="P11021">
+      <Sequence></Sequence>
+    </Protein>
+    <Protein id="P13639">
+      <Sequence></Sequence>
+    </Protein>
+  </ProteinList>
+  <CompoundList>
+    <Peptide id="1" sequence="YAEAVTR">
+      <cvParam cvRef="MS" accession="MS:1000041" name="charge state" value="2"/>
+      <cvParam cvRef="MS" accession="MS:1000893" name="peptide group label" value="light"/>
+      <userParam name="full_peptide_name" type="xsd:string" value="YAEAVTR"/>
+      <ProteinRef ref="P00558"/>
+      <RetentionTimeList>
+        <RetentionTime>
+          <cvParam cvRef="MS" accession="MS:1000896" name="normalized retention time" value="26.1"/>
+        </RetentionTime>
+      </RetentionTimeList>
+    </Peptide>
+    <Peptide id="2" sequence="EAALSTALSEK">
+      <cvParam cvRef="MS" accession="MS:1000041" name="charge state" value="2"/>
+      <cvParam cvRef="MS" accession="MS:1000893" name="peptide group label" value="light"/>
+      <userParam name="full_peptide_name" type="xsd:string" value="EAALSTALSEK"/>
+      <ProteinRef ref="P02545"/>
+      <RetentionTimeList>
+        <RetentionTime>
+          <cvParam cvRef="MS" accession="MS:1000896" name="normalized retention time" value="44.3"/>
+        </RetentionTime>
+      </RetentionTimeList>
+    </Peptide>
+    <Peptide id="3" sequence="LAVDEEENADNNTK">
+      <cvParam cvRef="MS" accession="MS:1000041" name="charge state" value="2"/>
+      <cvParam cvRef="MS" accession="MS:1000893" name="peptide group label" value="light"/>
+      <userParam name="full_peptide_name" type="xsd:string" value="LAVDEEENADNNTK"/>
+      <ProteinRef ref="P02786"/>
+      <RetentionTimeList>
+        <RetentionTime>
+          <cvParam cvRef="MS" accession="MS:1000896" name="normalized retention time" value="31.8"/>
+        </RetentionTime>
+      </RetentionTimeList>
+    </Peptide>
+    <Peptide id="4" sequence="TPAQFDADELR">
+      <cvParam cvRef="MS" accession="MS:1000041" name="charge state" value="2"/>
+      <cvParam cvRef="MS" accession="MS:1000893" name="peptide group label" value="light"/>
+      <userParam name="full_peptide_name" type="xsd:string" value="TPAQFDADELR"/>
+      <ProteinRef ref="P04083"/>
+      <RetentionTimeList>
+        <RetentionTime>
+          <cvParam cvRef="MS" accession="MS:1000896" name="normalized retention time" value="49.2"/>
+        </RetentionTime>
+      </RetentionTimeList>
+    </Peptide>
+    <Peptide id="5" sequence="SLADELALVDVLEDK">
+      <cvParam cvRef="MS" accession="MS:1000041" name="charge state" value="2"/>
+      <cvParam cvRef="MS" accession="MS:1000893" name="peptide group label" value="light"/>
+      <userParam name="full_peptide_name" type="xsd:string" value="SLADELALVDVLEDK"/>
+      <ProteinRef ref="P07195"/>
+      <RetentionTimeList>
+        <RetentionTime>
+          <cvParam cvRef="MS" accession="MS:1000896" name="normalized retention time" value="90.3"/>
+        </RetentionTime>
+      </RetentionTimeList>
+    </Peptide>
+    <Peptide id="6" sequence="NPDDITNEEYGEFYK">
+      <cvParam cvRef="MS" accession="MS:1000041" name="charge state" value="2"/>
+      <cvParam cvRef="MS" accession="MS:1000893" name="peptide group label" value="light"/>
+      <userParam name="full_peptide_name" type="xsd:string" value="NPDDITNEEYGEFYK"/>
+      <ProteinRef ref="P07900"/>
+      <RetentionTimeList>
+        <RetentionTime>
+          <cvParam cvRef="MS" accession="MS:1000896" name="normalized retention time" value="58.2"/>
+        </RetentionTime>
+      </RetentionTimeList>
+    </Peptide>
+    <Peptide id="7" sequence="DDVAQTDLLQIDPNFGSK">
+      <cvParam cvRef="MS" accession="MS:1000041" name="charge state" value="2"/>
+      <cvParam cvRef="MS" accession="MS:1000893" name="peptide group label" value="light"/>
+      <userParam name="full_peptide_name" type="xsd:string" value="DDVAQTDLLQIDPNFGSK"/>
+      <ProteinRef ref="P08195"/>
+      <RetentionTimeList>
+        <RetentionTime>
+          <cvParam cvRef="MS" accession="MS:1000896" name="normalized retention time" value="73.2"/>
+        </RetentionTime>
+      </RetentionTimeList>
+    </Peptide>
+    <Peptide id="8" sequence="LGDLYEEEMR">
+      <cvParam cvRef="MS" accession="MS:1000041" name="charge state" value="2"/>
+      <cvParam cvRef="MS" accession="MS:1000893" name="peptide group label" value="light"/>
+      <userParam name="full_peptide_name" type="xsd:string" value="LGDLYEEEMR"/>
+      <ProteinRef ref="P08670"/>
+      <RetentionTimeList>
+        <RetentionTime>
+          <cvParam cvRef="MS" accession="MS:1000896" name="normalized retention time" value="52.2"/>
+        </RetentionTime>
+      </RetentionTimeList>
+    </Peptide>
+    <Peptide id="9" sequence="FEELNMDLFR">
+      <cvParam cvRef="MS" accession="MS:1000041" name="charge state" value="2"/>
+      <cvParam cvRef="MS" accession="MS:1000893" name="peptide group label" value="light"/>
+      <userParam name="full_peptide_name" type="xsd:string" value="FEELNMDLFR"/>
+      <ProteinRef ref="P11021"/>
+      <RetentionTimeList>
+        <RetentionTime>
+          <cvParam cvRef="MS" accession="MS:1000896" name="normalized retention time" value="76.4"/>
+        </RetentionTime>
+      </RetentionTimeList>
+    </Peptide>
+    <Peptide id="10" sequence="STLTDSLVC(Carbamidomethyl)K">
+      <cvParam cvRef="MS" accession="MS:1000041" name="charge state" value="2"/>
+      <cvParam cvRef="MS" accession="MS:1000893" name="peptide group label" value="light"/>
+      <userParam name="full_peptide_name" type="xsd:string" value="STLTDSLVC(Carbamidomethyl)K"/>
+      <ProteinRef ref="P13639"/>
+      <Modification location="9" monoisotopicMassDelta="57.021464" averageMassDelta="57.0513">
+        <cvParam cvRef="UNIMOD" accession="UNIMOD:4" name="Carbamidomethyl"/>
+      </Modification>
+      <RetentionTimeList>
+        <RetentionTime>
+          <cvParam cvRef="MS" accession="MS:1000896" name="normalized retention time" value="46.9"/>
+        </RetentionTime>
+      </RetentionTimeList>
+    </Peptide>
+  </CompoundList>
+  <TransitionList>
+    <Transition id="sp|P00558|PGK1_HUMAN.YAEAVTR.+2y6.light" peptideRef="1">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="405.211235" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="646.351865"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="23.4"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="364.8"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y6"/>
+    </Transition>
+    <Transition id="sp|P00558|PGK1_HUMAN.YAEAVTR.+2y5.light" peptideRef="1">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="405.211235" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="575.314751"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="23.4"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="963"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y5"/>
+    </Transition>
+    <Transition id="sp|P00558|PGK1_HUMAN.YAEAVTR.+2y4.light" peptideRef="1">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="405.211235" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="446.272158"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="23.4"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="21282.17"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y4"/>
+    </Transition>
+    <Transition id="sp|P00558|PGK1_HUMAN.YAEAVTR.+2y3.light" peptideRef="1">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="405.211235" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="375.235044"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="23.4"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="27724.67"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y3"/>
+    </Transition>
+    <Transition id="sp|P00558|PGK1_HUMAN.YAEAVTR.+2b4.light" peptideRef="1">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="405.211235" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="435.187425"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="23.4"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="423.2"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y4"/>
+    </Transition>
+    <Transition id="sp|P02545|LMNA_HUMAN.EAALSTALSEK.+2y9.light" peptideRef="2">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="560.298235" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="919.509488"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="29"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="2188.8"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y9"/>
+    </Transition>
+    <Transition id="sp|P02545|LMNA_HUMAN.EAALSTALSEK.+2y8.light" peptideRef="2">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="560.298235" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="848.472374"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="29"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="5785.8"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y8"/>
+    </Transition>
+    <Transition id="sp|P02545|LMNA_HUMAN.EAALSTALSEK.+2y7.light" peptideRef="2">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="560.298235" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="735.38831"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="29"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="70092.17"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y7"/>
+    </Transition>
+    <Transition id="sp|P02545|LMNA_HUMAN.EAALSTALSEK.+2y6.light" peptideRef="2">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="560.298235" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="648.356282"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="29"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="35283.3"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y6"/>
+    </Transition>
+    <Transition id="sp|P02545|LMNA_HUMAN.EAALSTALSEK.+2y5.light" peptideRef="2">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="560.298235" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="547.308603"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="29"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="103748.3"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y5"/>
+    </Transition>
+    <Transition id="sp|P02786|TFR1_HUMAN.LAVDEEENADNNTK.+2y8.light" peptideRef="3">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="781.352456" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="905.395915"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="37"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="101676.2"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y8"/>
+    </Transition>
+    <Transition id="sp|P02786|TFR1_HUMAN.LAVDEEENADNNTK.+2y7.light" peptideRef="3">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="781.352456" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="776.353322"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="37"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="155166.2"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y7"/>
+    </Transition>
+    <Transition id="sp|P02786|TFR1_HUMAN.LAVDEEENADNNTK.+2y6.light" peptideRef="3">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="781.352456" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="662.310394"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="37"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="81800.67"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y6"/>
+    </Transition>
+    <Transition id="sp|P02786|TFR1_HUMAN.LAVDEEENADNNTK.+2y5.light" peptideRef="3">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="781.352456" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="591.27328"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="37"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="118239.2"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y5"/>
+    </Transition>
+    <Transition id="sp|P02786|TFR1_HUMAN.LAVDEEENADNNTK.+2y4.light" peptideRef="3">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="781.352456" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="476.246337"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="37"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="220069.8"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y4"/>
+    </Transition>
+    <Transition id="sp|P04083|ANXA1_HUMAN.TPAQFDADELR.+2y8.light" peptideRef="4">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="631.804216" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="993.4636"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="31.6"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="84479.2"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y8"/>
+    </Transition>
+    <Transition id="sp|P04083|ANXA1_HUMAN.TPAQFDADELR.+2y7.light" peptideRef="4">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="631.804216" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="865.405023"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="31.6"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="238157.5"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y7"/>
+    </Transition>
+    <Transition id="sp|P04083|ANXA1_HUMAN.TPAQFDADELR.+2y6.light" peptideRef="4">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="631.804216" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="718.336609"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="31.6"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="272339.7"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y6"/>
+    </Transition>
+    <Transition id="sp|P04083|ANXA1_HUMAN.TPAQFDADELR.+2y5.light" peptideRef="4">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="631.804216" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="603.309666"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="31.6"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="621424.8"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y5"/>
+    </Transition>
+    <Transition id="sp|P04083|ANXA1_HUMAN.TPAQFDADELR.+2y2.light" peptideRef="4">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="631.804216" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="288.203016"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="31.6"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="1401613"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y2"/>
+    </Transition>
+    <Transition id="sp|P07195|LDHB_HUMAN.SLADELALVDVLEDK.+2y8.light" peptideRef="5">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="815.432718" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="930.514239"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="38.2"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="817204.5"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y8"/>
+    </Transition>
+    <Transition id="sp|P07195|LDHB_HUMAN.SLADELALVDVLEDK.+2y7.light" peptideRef="5">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="815.432718" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="817.430175"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="38.2"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="849811"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y7"/>
+    </Transition>
+    <Transition id="sp|P07195|LDHB_HUMAN.SLADELALVDVLEDK.+2y6.light" peptideRef="5">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="815.432718" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="718.361761"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="38.2"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="767020.2"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y6"/>
+    </Transition>
+    <Transition id="sp|P07195|LDHB_HUMAN.SLADELALVDVLEDK.+2y5.light" peptideRef="5">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="815.432718" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="603.334818"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="38.2"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="495073"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y5"/>
+    </Transition>
+    <Transition id="sp|P07195|LDHB_HUMAN.SLADELALVDVLEDK.+2y4.light" peptideRef="5">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="815.432718" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="504.266404"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="38.2"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="1111631"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y4"/>
+    </Transition>
+    <Transition id="sp|P07900|HS90A_HUMAN.NPDDITNEEYGEFYK.+2y7.light" peptideRef="6">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="917.394321" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="935.414525"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="41.9"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="240135.3"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y7"/>
+    </Transition>
+    <Transition id="sp|P07900|HS90A_HUMAN.NPDDITNEEYGEFYK.+2y5.light" peptideRef="6">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="917.394321" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="643.308603"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="41.9"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="298968.5"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y5"/>
+    </Transition>
+    <Transition id="sp|P07900|HS90A_HUMAN.NPDDITNEEYGEFYK.+2y4.light" peptideRef="6">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="917.394321" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="586.287139"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="41.9"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="86135.33"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y4"/>
+    </Transition>
+    <Transition id="sp|P07900|HS90A_HUMAN.NPDDITNEEYGEFYK.+2y3.light" peptideRef="6">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="917.394321" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="457.244546"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="41.9"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="559425.3"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y3"/>
+    </Transition>
+    <Transition id="sp|P07900|HS90A_HUMAN.NPDDITNEEYGEFYK.+2y2.light" peptideRef="6">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="917.394321" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="310.176132"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="41.9"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="741300.8"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y2"/>
+    </Transition>
+    <Transition id="sp|P08195|4F2_HUMAN.DDVAQTDLLQIDPNFGSK.+2y8.light" peptideRef="7">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="988.484001" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="877.441408"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="44.4"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="76777.33"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y8"/>
+    </Transition>
+    <Transition id="sp|P08195|4F2_HUMAN.DDVAQTDLLQIDPNFGSK.+2y7.light" peptideRef="7">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="988.484001" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="764.357344"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="44.4"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="178451.8"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y7"/>
+    </Transition>
+    <Transition id="sp|P08195|4F2_HUMAN.DDVAQTDLLQIDPNFGSK.+2y6.light" peptideRef="7">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="988.484001" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="649.330401"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="44.4"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="199084.3"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y6"/>
+    </Transition>
+    <Transition id="sp|P08195|4F2_HUMAN.DDVAQTDLLQIDPNFGSK.+2b8.light" peptideRef="7">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="988.484001" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="858.383953"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="44.4"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="44389.83"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="b8"/>
+    </Transition>
+    <Transition id="sp|P08195|4F2_HUMAN.DDVAQTDLLQIDPNFGSK.+2b9.light" peptideRef="7">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="988.484001" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="971.468017"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="44.4"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="110369"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="b9"/>
+    </Transition>
+    <Transition id="sp|P08670|VIME_HUMAN.LGDLYEEEMR.+2y7.light" peptideRef="8">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="627.787178" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="969.434608"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="31.5"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="74090.17"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y7"/>
+    </Transition>
+    <Transition id="sp|P08670|VIME_HUMAN.LGDLYEEEMR.+2y6.light" peptideRef="8">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="627.787178" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="856.350544"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="31.5"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="187790.8"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y6"/>
+    </Transition>
+    <Transition id="sp|P08670|VIME_HUMAN.LGDLYEEEMR.+2y5.light" peptideRef="8">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="627.787178" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="693.287216"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="31.5"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="165625.5"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y5"/>
+    </Transition>
+    <Transition id="sp|P08670|VIME_HUMAN.LGDLYEEEMR.+2y4.light" peptideRef="8">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="627.787178" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="564.244623"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="31.5"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="193028.5"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y4"/>
+    </Transition>
+    <Transition id="sp|P08670|VIME_HUMAN.LGDLYEEEMR.+2b3.light" peptideRef="8">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="627.787178" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="286.139747"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="31.5"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="946954.7"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y3"/>
+    </Transition>
+    <Transition id="sp|P11021|GRP78_HUMAN.FEELNMDLFR.+2y7.light" peptideRef="9">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="657.313363" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="908.465849"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="32.5"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="116390.8"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y7"/>
+    </Transition>
+    <Transition id="sp|P11021|GRP78_HUMAN.FEELNMDLFR.+2y6.light" peptideRef="9">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="657.313363" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="795.381785"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="32.5"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="218467.8"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y6"/>
+    </Transition>
+    <Transition id="sp|P11021|GRP78_HUMAN.FEELNMDLFR.+2y5.light" peptideRef="9">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="657.313363" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="681.338857"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="32.5"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="100041.3"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y5"/>
+    </Transition>
+    <Transition id="sp|P11021|GRP78_HUMAN.FEELNMDLFR.+2y4.light" peptideRef="9">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="657.313363" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="550.298373"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="32.5"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="178829.2"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y4"/>
+    </Transition>
+    <Transition id="sp|P11021|GRP78_HUMAN.FEELNMDLFR.+2y3.light" peptideRef="9">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="657.313363" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="435.27143"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="32.5"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="809863.3"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y3"/>
+    </Transition>
+    <Transition id="sp|P13639|EF2_HUMAN.STLTDSLVC[CAM]K.+2y8.light" peptideRef="10">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="562.286814" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="935.486644"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="29.1"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="3094"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y8"/>
+    </Transition>
+    <Transition id="sp|P13639|EF2_HUMAN.STLTDSLVC[CAM]K.+2y7.light" peptideRef="10">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="562.286814" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="822.40258"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="29.1"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="30823.17"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y7"/>
+    </Transition>
+    <Transition id="sp|P13639|EF2_HUMAN.STLTDSLVC[CAM]K.+2y6.light" peptideRef="10">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="562.286814" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="721.354902"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="29.1"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="36048.5"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y6"/>
+    </Transition>
+    <Transition id="sp|P13639|EF2_HUMAN.STLTDSLVC[CAM]K.+2y5.light" peptideRef="10">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="562.286814" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="606.327959"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="29.1"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="69827.67"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y5"/>
+    </Transition>
+    <Transition id="sp|P13639|EF2_HUMAN.STLTDSLVC[CAM]K.+2y3.light" peptideRef="10">
+      <Precursor>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="562.286814" unitCvRef="MS" unitAccession="MS:1000040" unitName="m/z"/>
+      </Precursor>
+      <Product>
+        <cvParam cvRef="MS" accession="MS:1000827" name="isolation window target m/z" value="406.211866"/>
+      </Product>
+      <cvParam cvRef="MS" accession="MS:1000045" name="collision energy" value="29.1"/>
+      <cvParam cvRef="MS" accession="MS:1001226" name="product ion intensity" value="403604.8"/>
+      <cvParam cvRef="MS" accession="MS:1002007" name="target SRM transition"/>
+      <userParam name="annotation" type="xsd:string" value="y3"/>
+    </Transition>
+  </TransitionList>
+</TraML>
