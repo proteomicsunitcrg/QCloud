@@ -1,0 +1,79 @@
+[2016-10-04 10:21:58] START monitoring new RAW files...
+[2016-10-05 11:38:37] START monitoring new RAW files...
+[2016-10-05 11:40:41] START monitoring new RAW files...
+[2016-10-05 11:40:46] [msconverter] =============================================================================================================
+[2016-10-05 11:40:46] [msconverter] Converting file Z:\data\_test\Raw\1610\QC1X\160923_Q_QC1X_01_30.raw to mzML.
+[2016-10-05 11:40:46] [msconverter] Command: msconvert.exeZ:\data\_test\Raw\1610\QC1X\160923_Q_QC1X_01_30.raw --32 --mzML --zlib --filter peakPicking true 1 -o Z:\data\_test\mzML\1610
+[2016-10-05 11:41:04] [msconverter] Output: format: mzML (Precision_32 [ 1000514:Precision_32 1000515:Precision_32 ], ByteOrder_LittleEndian, Compression_Zlib) indexed="true"
+outputPath: Z:\data\_test\mzML\1610
+extension: .mzML
+contactFilename: 
+
+filters:
+  peakPicking
+  
+filenames:
+  Z:/data/_test/Raw/1610/QC1X/160923_Q_QC1X_01_30.raw
+  
+processing file: Z:/data/_test/Raw/1610/QC1X/160923_Q_QC1X_01_30.raw
+writing output file: Z:/data/_test/mzML/1610/160923_Q_QC1X_01_30.mzML
+
+
+[2016-10-05 11:41:04] [msconverter] =============================================================================================================
+[2016-10-05 11:41:04] [msconverter] =============================================================================================================
+[2016-10-05 11:41:04] [msconverter] Converting file Z:\data\_test\Raw\1610\QC1X\160923_Q_QC1X_01_30.raw to mXML.
+[2016-10-05 11:41:04] [msconverter] Command: msconvert.exeZ:\data\_test\Raw\1610\QC1X\160923_Q_QC1X_01_30.raw --32 --mzXML --zlib --filter peakPicking true 1 -o Z:\data\_test\mzXML\1610
+[2016-10-05 11:41:20] [msconverter] Output: format: mzXML (Precision_32 [ 1000514:Precision_32 1000515:Precision_32 ], ByteOrder_LittleEndian, Compression_Zlib) indexed="true"
+outputPath: Z:\data\_test\mzXML\1610
+extension: .mzXML
+contactFilename: 
+
+filters:
+  peakPicking
+  
+filenames:
+  Z:/data/_test/Raw/1610/QC1X/160923_Q_QC1X_01_30.raw
+  
+processing file: Z:/data/_test/Raw/1610/QC1X/160923_Q_QC1X_01_30.raw
+writing output file: Z:/data/_test/mzXML/1610/160923_Q_QC1X_01_30.mzXML
+
+
+[2016-10-05 11:41:20] [msconverter] =============================================================================================================
+[2016-10-05 11:41:20] [msconverter] =============================================================================================================
+[2016-10-05 11:41:20] [msconverter] Converting file Z:\data\_test\Raw\1610\QC1X\160930_Q_QC1X_01_03.raw to mzML.
+[2016-10-05 11:41:20] [msconverter] Command: msconvert.exeZ:\data\_test\Raw\1610\QC1X\160930_Q_QC1X_01_03.raw --32 --mzML --zlib --filter peakPicking true 1 -o Z:\data\_test\mzML\1610
+[2016-10-05 11:41:38] [msconverter] Output: format: mzML (Precision_32 [ 1000514:Precision_32 1000515:Precision_32 ], ByteOrder_LittleEndian, Compression_Zlib) indexed="true"
+outputPath: Z:\data\_test\mzML\1610
+extension: .mzML
+contactFilename: 
+
+filters:
+  peakPicking
+  
+filenames:
+  Z:/data/_test/Raw/1610/QC1X/160930_Q_QC1X_01_03.raw
+  
+processing file: Z:/data/_test/Raw/1610/QC1X/160930_Q_QC1X_01_03.raw
+writing output file: Z:/data/_test/mzML/1610/160930_Q_QC1X_01_03.mzML
+
+
+[2016-10-05 11:41:38] [msconverter] =============================================================================================================
+[2016-10-05 11:41:38] [msconverter] =============================================================================================================
+[2016-10-05 11:41:38] [msconverter] Converting file Z:\data\_test\Raw\1610\QC1X\160930_Q_QC1X_01_03.raw to mXML.
+[2016-10-05 11:41:38] [msconverter] Command: msconvert.exeZ:\data\_test\Raw\1610\QC1X\160930_Q_QC1X_01_03.raw --32 --mzXML --zlib --filter peakPicking true 1 -o Z:\data\_test\mzXML\1610
+[2016-10-05 11:41:55] [msconverter] Output: format: mzXML (Precision_32 [ 1000514:Precision_32 1000515:Precision_32 ], ByteOrder_LittleEndian, Compression_Zlib) indexed="true"
+outputPath: Z:\data\_test\mzXML\1610
+extension: .mzXML
+contactFilename: 
+
+filters:
+  peakPicking
+  
+filenames:
+  Z:/data/_test/Raw/1610/QC1X/160930_Q_QC1X_01_03.raw
+  
+processing file: Z:/data/_test/Raw/1610/QC1X/160930_Q_QC1X_01_03.raw
+writing output file: Z:/data/_test/mzXML/1610/160930_Q_QC1X_01_03.mzXML
+
+
+[2016-10-05 11:41:55] [msconverter] =============================================================================================================
