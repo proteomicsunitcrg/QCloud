@@ -4,7 +4,7 @@
 
 <b>Workflows</b>: supported QC workflows in TOPPAS (OpenMS) format and additional files (FASTA and traML). 
 
-<b>ftp2repo</b>: downloads RAW data from the FTP server @ CRG to the repository/storage. 
+<b>ftp2repo</b>: downloads RAW data from the FTP server @ CRG to the internal repository/storage. 
 
 <b>mzml2qcml.jar</b>: a Java-based wrapper of OpenMS v2.0. 
 
