@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -19,6 +20,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
+import java.util.UUID;
 import java.util.logging.FileHandler;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
@@ -57,6 +59,7 @@ import org.xml.sax.SAXException;
  *               	     Refactor: mzxml2qcml to mzml2qcml
  *               	     Code cleaning and optimization
  *               03/03/2017: now process only the date coming from one node
+ *               10/07/2017: automatization worklow creation
  *
  */
 
@@ -82,7 +85,9 @@ public class mzml2qcml {
 	public static String isLocal, minFileSize, minFileAge, insertToDB, forceDateDir, 
 	inputDir, outputDir, instrumentDirs, startDataDir, finalDataDir, 
 	startFileExt, finalFileExt, mzmlFolder, toppasWorkflowOutput, logDir, trfDir, isLinux, toppasWorkflowDir,
-	toppasOutputDir, qcCode, pathBinExecutePipeline, numJobs, openmsVer, forceNode;
+	toppasOutputDir, qcCode, pathBinExecutePipeline, numJobs, openmsVer, forceNode, instrumentcv, sampleType,
+	namewf,fragmentation,database,decoy_database,executable,id_ions,fragment_mass_tolerance,remove_activation,
+	select_activation,uniqueID,templateFileName,tramlfile,tramlDir,workflow;
 	public static boolean processFilesResult = false;
 	
 	public static void main(String[] args) {
@@ -104,13 +109,17 @@ public class mzml2qcml {
 					ArrayList<String> fileNamesToProcess = getFilesToProcess(dateDirsList.get(i));
 					if(fileNamesToProcess.size() > 0){
 						for(int j = 0; j < fileNamesToProcess.size(); j++){//for each filename...
+						    	qcCode = getQcodeFromAnyString(fileNamesToProcess.get(j));
 							logger.info("Processing "+fileNamesToProcess.get(j)+" file...");
-							logger.info("Step 2 - OpenMS "+openmsVer+" processing");
-							logger.info("Step 2.1 - OpenMS - Modifying .trf configuration file...");
-							qcCode = modifyTRF(trfDir,dateDirsList.get(i),fileNamesToProcess.get(j));		
-							logger.info("Step 2.2 - OpenMS - Launching ExecutePipeline (OpenMS) to create the qcML file...");
+							logger.info("Step 2 - Creating .toppas and .trf files...");
+							getDBtoppaswf_VM(DB_URL,USER,PASS);
+							logger.info("Step 2.1 - Creating .toppas file");
+							createToppasFile(dateDirsList.get(i),fileNamesToProcess.get(j));
+							logger.info("Step 2.2 - Creating .trf file");
+							createTrfFile(dateDirsList.get(i),fileNamesToProcess.get(j));
+							logger.info("Step 3 - OpenMS - Launching ExecutePipeline (OpenMS) to create the qcML file...");
 							processFilesResult = processFiles(dateDirsList.get(i),fileNamesToProcess.get(j));
-							//cleanToppasOutputDir(qcCode);
+							cleanTmpFiles();
 							if(processFilesResult){
 								logger.info("Finished processing file "+fileNamesToProcess.get(j)+".");
 							} else {
@@ -188,6 +197,70 @@ public class mzml2qcml {
 	    	
 	}
 
+	private static void getDBtoppaswf_VM(String DB_URL, String USER, String PASS){
+	    
+	    	try {//start db conn
+
+			Class.forName(JDBC_DRIVER);
+			conn = DriverManager.getConnection(DB_URL, USER, PASS);
+			stmt = conn.createStatement();
+					
+			String queryQcode = "SELECT cv,type,workflow FROM qcode INNER JOIN instrument ON instrument.idinstrument = qcode.idinstrument INNER JOIN instrumentcv ON instrumentcv.id = instrument.cv WHERE internal = '"+qcCode+"'";
+			ResultSet rsqueryQcode = stmt.executeQuery(queryQcode);
+			while (rsqueryQcode.next()) {
+			    instrumentcv = rsqueryQcode.getString("cv");
+			    sampleType = rsqueryQcode.getString("type");
+			    workflow = rsqueryQcode.getString("workflow");
+			}
+			
+			String queryCheckWorkflowID = "SELECT idtoppaswf FROM toppaswf WHERE instrumentcvid = '"+instrumentcv+"'";
+			ResultSet rsqueryCheckWorkflowID = stmt.executeQuery(queryCheckWorkflowID);
+			
+			String queryToppaswf = "";
+			if(!rsqueryCheckWorkflowID.first()){
+			    queryToppaswf = "SELECT namewf,fragmentation,adapter_database,decoy_database,executable,id_ions,fragment_mass_tolerance,remove_activation,select_activation,templatewf,tramlfile FROM toppaswf WHERE instrumentcvid = '' AND type = '"+sampleType+"' AND namewf = '"+workflow+"'";
+			} else {
+			    queryToppaswf = "SELECT namewf,fragmentation,adapter_database,decoy_database,executable,id_ions,fragment_mass_tolerance,remove_activation,select_activation,templatewf,tramlfile FROM toppaswf WHERE instrumentcvid = '"+instrumentcv+"' AND type = '"+sampleType+"' AND namewf = '"+workflow+"'";
+			}
+			
+			ResultSet rsqueryToppaswf = stmt.executeQuery(queryToppaswf);
+			while (rsqueryToppaswf.next()) {
+			    namewf = rsqueryToppaswf.getString("namewf");
+			    fragmentation = rsqueryToppaswf.getString("fragmentation");
+			    database = rsqueryToppaswf.getString("adapter_database");
+			    decoy_database = rsqueryToppaswf.getString("decoy_database");
+			    executable = rsqueryToppaswf.getString("executable");
+			    id_ions = rsqueryToppaswf.getString("id_ions");
+			    fragment_mass_tolerance = rsqueryToppaswf.getString("fragment_mass_tolerance");
+			    remove_activation = rsqueryToppaswf.getString("remove_activation");
+			    select_activation = rsqueryToppaswf.getString("select_activation");
+			    templateFileName  = rsqueryToppaswf.getString("templatewf");
+			    tramlfile  = rsqueryToppaswf.getString("tramlfile");
+			}
+			
+		} catch (SQLException sqle) {
+			logger.warning("Query SQLException ==> " + sqle.getMessage());
+			sqle.printStackTrace();
+		} catch (Exception e) {
+			logger.warning("General Exception ==> " + e.getMessage());
+			e.printStackTrace();
+		} finally {
+			try {
+				if (stmt != null) stmt.close();
+			} catch (SQLException stmte) {
+				logger.warning("Closing SQL Statement exception ==> " + stmte.getMessage());
+				stmte.printStackTrace();
+			}
+			try {
+				if (conn != null) conn.close();
+			} catch (SQLException conne) {
+				logger.warning("Closing SQL Connection exception ==> " + conne.getMessage());
+				conne.printStackTrace();
+			}
+		} // end db conn 
+	    	
+	}
+	
 	private static List<String> getInputDirs(String forceDateDir) {
 		List<String> dateDirList = new ArrayList<String>();
 		if(forceDateDir.equals("present")){
@@ -221,6 +294,7 @@ public class mzml2qcml {
 			trfDir = prop.getProperty("trfDir");
 			toppasWorkflowDir = prop.getProperty("toppasWorkflowDir");
 			toppasOutputDir = prop.getProperty("toppasOutputDir");
+			tramlDir = prop.getProperty("tramlDir");
 			finalFileExt = prop.getProperty("finalFileExt");
 			pathBinExecutePipeline = prop.getProperty("pathBinExecutePipeline");
 			numJobs = prop.getProperty("numJobs");
@@ -240,6 +314,20 @@ public class mzml2qcml {
 		String year_formatted = year_format.format(now);
 		String month_formatted = month_format.format(now);
 		return year_formatted+month_formatted;
+	}
+	
+	private static void cleanTmpFiles(){
+	    	try {
+	    	    File fileToppas = new File(toppasWorkflowDir+File.separator+"tmp_"+uniqueID+".toppas");
+	    	    File fileTrf = new File(toppasWorkflowDir+File.separator+"tmp_"+uniqueID+".trf");
+	    	    if(fileToppas.exists() && fileTrf.exists()){
+	    		fileToppas.delete();
+	    		fileTrf.delete();
+	    		logger.info("Successfully deleted tmp_"+uniqueID+".toppas and tmp_"+uniqueID+".trf files.");
+	    	    }
+	    	} catch(Exception e){
+	    	    logger.warning("==> Delete .toppas and .trf files error"+e.getMessage());
+	    	}
 	}
 	
 	private static void configureLogFile(String logDir){
@@ -350,6 +438,159 @@ public class mzml2qcml {
 		return filesToProcess;
 	}
 	
+	private static void createToppasFile(String dateDir, String fileToAdd){
+	    
+	    	uniqueID = UUID.randomUUID().toString();
+		String toppasTmpFile = toppasWorkflowDir+File.separator+"tmp_"+uniqueID+".toppas";
+		String templateFile = toppasWorkflowDir+File.separator+templateFileName+".toppas";
+		
+		try {
+			//Decide template modifications according the workflow type:
+			if(namewf.contains("shotgun")){
+			    
+				DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+				DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+				DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+				Document doc = null;
+				if(new File(templateFile).exists()) {
+					doc = docBuilder.parse(templateFile);
+				} else {
+					logger.warning("==> The file "+new File(templateFile).getAbsolutePath()+" does not exist. Please check mzml2qcml.properties file.");
+				}
+			    
+				XPathFactory xPathfactory = XPathFactory.newInstance();
+				XPath xpath = xPathfactory.newXPath();
+				
+				//Edit adapter node (Mascot, OMSSA, etc.): 
+				XPathExpression databaseExpr = xpath.compile("/PARAMETERS/NODE/NODE/NODE");
+				NodeList  adapterParametersNodeList = (NodeList) databaseExpr.evaluate(doc,XPathConstants.NODESET);
+				for (int i = 0; i < adapterParametersNodeList.getLength(); i++) {
+				    	Node adapterParametersNode = adapterParametersNodeList.item(i);
+					if (adapterParametersNode != null && adapterParametersNode.getNodeType() == Node.ELEMENT_NODE) {
+					    NodeList adapterParametersChildNodes = adapterParametersNode.getChildNodes();
+					    for (int j = 0; j < adapterParametersChildNodes.getLength(); j++) {
+						Node adapterParametersChild = adapterParametersChildNodes.item(j);
+						if (adapterParametersChild != null && adapterParametersChild.getNodeType() == Node.ELEMENT_NODE) {
+						    
+						    //database: 
+						    if (adapterParametersChild.getAttributes().getNamedItem("name").getNodeValue().equals("database")) {
+							Node databaseAttr = adapterParametersChild.getAttributes().getNamedItem("value");
+							databaseAttr.setTextContent(database);
+						    }
+						    
+						    //executable: 
+						    if (adapterParametersChild.getAttributes().getNamedItem("name").getNodeValue().equals("omssa_executable")) {
+							Node executableAttr = adapterParametersChild.getAttributes().getNamedItem("value");
+							executableAttr.setTextContent(executable);
+						    }
+						    
+						    //id_ions: 
+						    if (adapterParametersChild.getAttributes().getNamedItem("name").getNodeValue().equals("i")) {
+							Node id_ionsAttr = adapterParametersChild.getAttributes().getNamedItem("value");
+							id_ionsAttr.setTextContent(id_ions);
+						    }
+						        
+						    //fragment_mass_tolerance: 
+						    if (adapterParametersChild.getAttributes().getNamedItem("name").getNodeValue().equals("fragment_mass_tolerance")) {
+							Node fragment_mass_toleranceAttr = adapterParametersChild.getAttributes().getNamedItem("value");
+							fragment_mass_toleranceAttr.setTextContent(fragment_mass_tolerance);
+						    }
+						    
+						}
+					    }
+					}
+				}
+				
+				//Save modifications into temporal .toppas file: 
+				TransformerFactory transformerFactory = TransformerFactory.newInstance();
+				Transformer transformer = transformerFactory.newTransformer();
+				DOMSource source = new DOMSource(doc);
+				StreamResult result = new StreamResult(new File(toppasTmpFile));
+				transformer.transform(source, result);	
+				
+			} else {
+			    try {
+				Files.copy(Paths.get(templateFile), Paths.get(toppasTmpFile));
+			    } catch (Exception e){
+				e.getMessage();
+			    }
+			} 
+
+			
+		} catch (Exception e){
+			logger.warning("==> Creating .toppas file error: "+e.getMessage());
+		}
+	    
+	}
+
+	private static void createTrfFile(String dateDir, String fileToAdd){
+	    
+	    	String trfTmpFile = toppasWorkflowDir+File.separator+"tmp_"+uniqueID+".trf";
+		String templateFile = toppasWorkflowDir+File.separator+templateFileName+".trf";
+		
+		try {
+				DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+				DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+				DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+				Document doc = null;
+				if(new File(templateFile).exists()) {
+					doc = docBuilder.parse(templateFile);
+				} else {
+					logger.warning("==> The file "+new File(templateFile).getAbsolutePath()+" does not exist. Please check mzml2qcml.properties file.");
+				}
+				
+				Node parameters = doc.getFirstChild();
+				
+				//.mzML file node:
+				Node listitem = doc.getElementsByTagName("LISTITEM").item(0);
+				NamedNodeMap attr = listitem.getAttributes();
+				Node nodeAttr = attr.getNamedItem("value");
+				String cleanFilePath = fileToAdd.replace("C:", "");
+				cleanFilePath = cleanFilePath.replace("\\", "/"); 
+				nodeAttr.setTextContent("file://"+cleanFilePath);
+				
+				//database node:
+				if(namewf.contains("shotgun")){
+				    Node listitem2 = doc.getElementsByTagName("LISTITEM").item(1);
+				    NamedNodeMap attr2 = listitem2.getAttributes();
+				    Node nodeAttr2 = attr2.getNamedItem("value");
+				    String cleanFilePath2 = "";
+				    cleanFilePath2 = decoy_database.replace("C:", "");
+				    cleanFilePath2 = cleanFilePath2.replace("\\", "/"); 
+				    nodeAttr2.setTextContent("file://"+cleanFilePath2);
+				    TransformerFactory transformerFactory = TransformerFactory.newInstance();
+				    Transformer transformer = transformerFactory.newTransformer();
+				    DOMSource source = new DOMSource(doc);
+				    StreamResult result = new StreamResult(new File(trfTmpFile));
+				    transformer.transform(source, result);	
+				} else if(namewf.contains("srm")){
+				    Node listitem2 = doc.getElementsByTagName("LISTITEM").item(1);
+				    NamedNodeMap attr2 = listitem2.getAttributes();
+				    Node nodeAttr2 = attr2.getNamedItem("value");
+				    String cleanFilePath2 = "";
+				    String tramlAbsPath = tramlDir+File.separator+tramlfile+".traml";
+				    cleanFilePath2 = tramlAbsPath.replace("C:", "");
+				    cleanFilePath2 = cleanFilePath2.replace("\\", "/"); 
+				    nodeAttr2.setTextContent("file://"+cleanFilePath2);
+				    TransformerFactory transformerFactory = TransformerFactory.newInstance();
+				    Transformer transformer = transformerFactory.newTransformer();
+				    DOMSource source = new DOMSource(doc);
+				    StreamResult result = new StreamResult(new File(trfTmpFile));
+				    transformer.transform(source, result);
+				} else if(namewf.contains("ttof")){
+				    TransformerFactory transformerFactory = TransformerFactory.newInstance();
+				    Transformer transformer = transformerFactory.newTransformer();
+				    DOMSource source = new DOMSource(doc);
+				    StreamResult result = new StreamResult(new File(trfTmpFile));
+				    transformer.transform(source, result);
+				}
+
+		} catch (Exception e){
+			logger.warning("==> Creating .toppas file error: "+e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	
 	private static String modifyTRF(String trfDir, String dateDir, String fileToAdd){
 	    
 		String trfFile = "";
@@ -427,8 +668,12 @@ public class mzml2qcml {
 	    	 * qcmlOutputFile         = C:\Users\rolivella\qc\pipeline\TOPPAS_out\010-QCCalculator\170131_Q_QC1V_01_03.qcml
 	    	 * 
 	    	 */
-		String toppasWorkflowFile = toppasWorkflowDir+File.separator+qcCode+".toppas";
-		String trfFile = trfDir+File.separator+qcCode+".trf";
+		//String toppasWorkflowFile = toppasWorkflowDir+File.separator+qcCode+".toppas";
+		//String trfFile = trfDir+File.separator+qcCode+".trf";
+	    	
+		String toppasWorkflowFile = toppasWorkflowDir+File.separator+"tmp_"+uniqueID+".toppas";
+		String trfFile = trfDir+File.separator+"tmp_"+uniqueID+".trf";
+	    	
 		sourceInstrumentFile = new File(inputDir+File.separator+instrumentFinalDir+File.separator+startDataDir+File.separator+dateDir+File.separator+qcCode+File.separator+filename.substring(0, filename.lastIndexOf('.'))+"."+startFileExt);
         	String mzmlFilePath = inputDir+File.separator+instrumentFinalDir+File.separator+mzmlFolderFinal+File.separator+dateDir+File.separator+basename+"."+mzmlExt;
         	
