@@ -1,4 +1,4 @@
-# QCloud source code
+# QCloud v1 (2018) source code
 
 <b>QCrawler</b>: is the entry point into the QCloud system. It performs user authentication, and once the user has defined the acquisition folder and the instrument, it automatically locates and uploads the quality control acquisition files and instrument parameters to the QCloud system through a remote FTP server.
 
@@ -20,3 +20,5 @@ Proteowizard: https://sourceforge.net/projects/proteowizard/
 
 
 <b>QCloud is under Creative Commons License ‎Attribution-ShareAlike 4.0.</b>
+
+Article: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0189209
