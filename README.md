@@ -1,5 +1,7 @@
 # QCloud v1 (2018) source code
 
+## For the current QCloud version, please refer to: https://pubs.acs.org/doi/pdf/10.1021/acs.jproteome.0c00853
+
 <b>QCrawler</b>: is the entry point into the QCloud system. It performs user authentication, and once the user has defined the acquisition folder and the instrument, it automatically locates and uploads the quality control acquisition files and instrument parameters to the QCloud system through a remote FTP server.
 
 <b>Workflows</b>: supported QC workflows in TOPPAS (OpenMS) format and additional files (FASTA and traML). 
